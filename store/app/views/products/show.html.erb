@@ -1,0 +1,25 @@
+<h1>Product Show Page</h1>
+
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @product.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %>
+<%= link_to 'Delete', product_path(@product), method: :delete, data: {confirm: 'Are you sure?'} %>
+<%= link_to 'Back', products_path %>
